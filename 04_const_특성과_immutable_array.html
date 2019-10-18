@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="description" content="ES6 in Action: New String Methods [2]">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>ES6 in Action: New String Methods</title>
+  <style>
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    border: 1px solid #000;
+    list-style: none;
+    padding: 10px;  
+  }
+</style>
+</head>
+<body>
+  <ul>
+    <li>js</li>
+    <li>java</li>
+    <li>python</li>
+    <li>django</li>
+  </ul>
+</body>
+</html>
+<script>
+	function home() {
+		const list = ['apple','orange','melon'];
+		list.push('asdf');
+		console.log(list);
+	}
+	// const를 사용하더라도 배열과 오브젝트의 값을 추가,변경,삭제하는 것은 가능
+	// 값을 재할당 하는 경우의 코드만 불가
+
+	// immutable array를 어떻게 만들까?
+	// immutable array : 뒤로가기, 앞으로가기를 눌러서 어떤 값을
+	// 되돌리고 싶을 때
+	const list = ['apple','orange','melon'];
+	// concat : 기존 배열에 원소 또는 배열을 추가하여 새 배열을 만드는 속성
+	list2 = [].concat(list, 'banana');
+	console.log(list === list2);
+
+	// list2, list3를 만들어도 list는 그대로 보존됨
+
+
+</script>

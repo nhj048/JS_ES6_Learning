@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="description" content="ES6 in Action: New String Methods [2]">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>ES6 in Action: New String Methods</title>
+  <style>
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    border: 1px solid #000;
+    list-style: none;
+    padding: 10px;  
+  }
+</style>
+</head>
+<body>
+  <ul>
+    <li>js</li>
+    <li>java</li>
+    <li>python</li>
+    <li>django</li>
+  </ul>
+</body>
+</html>
+<script>
+  // newData 배열에 pre 배열을 중간에 추가
+  // let pre = [100,200,'hello',null];
+
+  // let newData = [0,1,2,3,...pre,4];
+
+  // console.log(newData);
+
+  // 개별 파라미터로 전달하기 쉬움
+
+
+  function sum(a,b,c) {
+    return a+b+c;
+  }
+
+  let pre = [100,200,300];
+
+  // 바보같은 방법
+  console.log(sum(pre[0],pre[1],pre[2]));
+
+  // 새로운 방법
+  console.log(sum.apply(null, pre));
+
+  // 다른 방법
+  console.log(sum(...pre));
+
+  // 배열 형태의 인자를 넘길 때 사용하면 좋음
+  // 배열을 바꾸지 않고 새로운 값을 추가하거나, 배열을 새로운 함수에 파라미터로 전달하고자 할 때 사용하면 좋음
+</script>

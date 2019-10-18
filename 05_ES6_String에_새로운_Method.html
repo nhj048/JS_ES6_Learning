@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="description" content="ES6 in Action: New String Methods [2]">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>ES6 in Action: New String Methods</title>
+  <style>
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    border: 1px solid #000;
+    list-style: none;
+    padding: 10px;  
+  }
+</style>
+</head>
+<body>
+  <ul>
+    <li>js</li>
+    <li>java</li>
+    <li>python</li>
+    <li>django</li>
+  </ul>
+</body>
+</html>
+<script>
+  // ES6 String에 새로운 메서드들.
+
+  let str = 'hello world ! ^^~~';
+  let matchstr = 'hello';
+  let matchstr2 = '~~';
+
+  // startsWith()
+  // startsWith(txt)는 txt부터 시작하는 여부가 맞는지 true/false를 return 해준다.
+  // console.log(str.startsWith(matchstr));
+
+  // endsWith()
+  // endsWith(txt)는 txt가 끝에 위치 하는게 맞는지 true/false를 return 해준다.
+  // console.log(str.endsWith(matchstr2));
+
+  // includes()
+  // 해당 문자열에 특정 문자열이 포함되어 있는지 여부
+  console.log('include test', str.includes('world'));
+</script>

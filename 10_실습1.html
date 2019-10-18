@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="description" content="ES6 in Action: New String Methods [2]">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>ES6 in Action: New String Methods</title>
+  <style>
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    border: 1px solid #000;
+    list-style: none;
+    padding: 10px;  
+  }
+</style>
+</head>
+<body>
+  <ul>
+    <li>apple</li>
+    <li>orange</li>
+    <li>banana</li>
+    <li>strawberry</li>
+  </ul>
+</body>
+</html>
+<script>
+
+	// 문제 풀이
+	// filter, includes, from을 사용해서 문자열 'e'가 포함된
+	// 노드로 구성된 배열을 만들어서 반환하기
+
+	// 내가 한 코드
+	const sel = document.querySelectorAll('li');
+	
+	function print() {
+	  let arr = new Array();
+	  for (let i = 0; i < sel.length; i++) {
+	    let txt = sel[i].textContent;   
+
+	    if(txt.includes('e')) {    
+	      arr.push(txt);
+	    }
+	  } 
+	  console.log(arr);
+	}
+
+	print(arr);
+
+	// 예제 풀이
+	function print2() {
+	  let list = document.querySelectorAll('li');
+		// console.log(toString.call(list));
+
+	  // li노드로 구성된 배열
+	  let listArray = Array.from(list); 
+		// console.log(toString.call(listArray));
+
+		// filter method
+		// 주어진 함수의 테스트를 통과하는 모든 요소를 모아 배열로 반환
+	  let eArray = listArray.filter(function(v) {
+	    return v.textContent.includes('e');
+	  });
+	  return eArray;
+	}
+
+	console.log(print2());
+
+
+
+</script>

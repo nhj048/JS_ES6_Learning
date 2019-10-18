@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="description" content="ES6 in Action: New String Methods [2]">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>ES6 in Action: New String Methods</title>
+  <style>
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    border: 1px solid #000;
+    list-style: none;
+    padding: 10px;  
+  }
+</style>
+</head>
+<body>
+  <ul>
+    <li>js</li>
+    <li>java</li>
+    <li>python</li>
+    <li>django</li>
+  </ul>
+</body>
+</html>
+<script>
+// ES6 from method
+
+function addMark() {
+  let newData = [];
+  
+  // arguments = 인자값을 안줘도 특별한 값을 이용해서
+  // 인자값들을 배열과 비슷한 형태로 들어가게 됨
+  // 갈현적인 parameter가 들어오는 경우 사용됨
+  // 갯수가 몇개가 될지 모르는 경우 이용하면 유용함
+  for(let i=0; i<arguments.length; i++) {
+    newData.push(arguments[i] + '!');
+  }
+  
+  console.log(newData);
+}
+addMark(1,2,3,4,5);
+
+
+// function addMark2() {  
+  
+//   let newData2 = arguments.map(function(value) {
+//     return value + '!';
+//   });
+  
+//   console.log(newData2);
+// }
+// addMark2(1,2,3,4,5);
+
+// addMark2 함수를 사용할 경우 arguments가 배열의 모양이지만
+// 배열이 아니므로 map을 이용할 수 없음
+
+// 따라서 배열의 모양을 가진 것을 진짜 배열로 만들어 줘야함
+// 가짜배열을 진짜 배열로 만들어 주는 방법은 from을 사용
+function addMark3() {  
+  let newArray = Array.from(arguments);
+  let newData3 = newArray.map(function(value) {
+    return value + '!';
+  });
+  
+  console.log(newData3);
+}
+
+addMark3(1,2,3,4,5);
+</script>

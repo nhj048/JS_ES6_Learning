@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="description" content="ES6 in Action: New String Methods [2]">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>ES6 in Action: New String Methods</title>
+  <style>
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    border: 1px solid #000;
+    list-style: none;
+    padding: 10px;  
+  }
+</style>
+</head>
+<body>
+  <ul>
+    <li>js</li>
+    <li>java</li>
+    <li>python</li>
+    <li>django</li>
+  </ul>
+</body>
+</html>
+<script>
+var data = [1,2,undefined,NaN,null,''];
+Array.prototype.getIndex = function(){};
+// for문을 이용한 loop
+// for (var i=0; i<data.length; i++) {
+//   console.log(i);
+// }
+
+// forEach를 이용한 loop
+// data.forEach(function(value) {
+//   console.log('valueis',value);
+// });
+
+// for in -> 오브젝트를 순회하기 위함
+// 배열도 오브젝트로 분류
+// 자기 자신이 가지고 있지 않은 상위에 있는 추가된 값들 까지도 나타낼 수 있음
+// 따라서 for in을 array에서 사용해서는 안된다.
+ 
+// for(let idx in data) {
+//   console.log(data[idx]);
+// }
+
+// for of -> 배열을 loop 도는 새로운 방법
+// for (let value of data) {
+//   console.log(value);
+// }
+
+// 문자열을 캐릭터 단위로 돌면서 리턴해주기도 함
+var str = 'hello world!!!!';
+for (let value of str) {
+  console.log(value);
+}
+
+
+</script>

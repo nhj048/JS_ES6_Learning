@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="description" content="ES6 in Action: New String Methods [2]">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>ES6 in Action: New String Methods</title>
+  <style>
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    border: 1px solid #000;
+    list-style: none;
+    padding: 10px;  
+  }
+</style>
+</head>
+<body>
+  <ul>
+    <li>js</li>
+    <li>java</li>
+    <li>python</li>
+    <li>django</li>
+  </ul>
+</body>
+</html>
+<script>
+  // spread operator : 펼침연산자
+  let pre = ['apple','orange',100];
+  // spread operator : 펼침연산자
+  // [...arr]
+  let newData = [...pre];
+  // 메모리의 새로운 공간에 새로운 배열로 데이터를 복사
+  // ... = pre를 펼쳐서 보여주는 것
+  console.log(pre,newData);
+  // 두개는 다른 데이터임
+  console.log(pre === newData);
+</script>

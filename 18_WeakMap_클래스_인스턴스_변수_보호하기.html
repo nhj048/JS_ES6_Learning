@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="description" content="ES6 in Action: New String Methods [2]">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>ES6 in Action: New String Methods</title>
+  <style>
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    border: 1px solid #000;
+    list-style: none;
+    padding: 10px;  
+  }
+</style>
+</head>
+<body>
+	<div>Lorem ipsum dolor sit amet, consectetur adipisicin</div>
+</body>
+</html>
+<script>
+	// function Area(height,width) {
+	//   this.height = height;
+	//   this.width = width;
+	// }
+
+	// Area.prototype.getArea = function() {
+	//   return this.height * this.width;
+	// }
+
+	// let myarea = new Area(10,20);
+	// console.log(myarea.getArea());
+	// console.log(myarea.height);
+
+	// WeakMap 활용
+	// Private한 변수
+
+	// const wm = new WeakMap();
+
+	// function Area(height,width) {
+	//   wm.set(this, {height, width});
+	// }
+
+	// Area.prototype.getArea = function() {
+	//   const {height, width} = wm.get(this);
+	//   return height * width;
+	// }
+
+	// let myarea = new Area(10,20);
+	// console.log(myarea.getArea()); // myarea라는 객체에서는 직접 width, height를 못뽑음
+	// console.log(myarea.height); // 외부에서 접근 안됨
+
+	// const wm = new WeakMap();
+
+	// function Area(height,width) {
+	//   wm.set(this, {height, width});
+	// }
+
+	// Area.prototype.getArea = function() {
+	//   const {height, width} = wm.get(this);
+	//   return height * width;
+	// }
+
+	// let myarea = new Area(10,20);
+	// console.log(myarea.getArea()); // myarea라는 객체에서는 직접 width, height를 못뽑음
+	// console.log(wm.has(myarea)); // true
+
+	// myarea = null;
+
+	// console.log(wm.has(myarea)); // false
+
+	const obj = {};
+
+	function Area(height,width) {
+	  obj.height = height;
+	  obj.width = width;
+	}
+
+	Area.prototype.getArea = function() {  
+	  return obj.height * obj.width;
+	}
+
+	let myarea = new Area(10,20);
+
+	// console.log(myarea.getArea());
+	console.log(obj);
+
+	myarea = null;
+
+	console.log(obj);
+</script>

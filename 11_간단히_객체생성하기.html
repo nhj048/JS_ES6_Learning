@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="description" content="ES6 in Action: New String Methods [2]">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>ES6 in Action: New String Methods</title>
+  <style>
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    border: 1px solid #000;
+    list-style: none;
+    padding: 10px;  
+  }
+</style>
+</head>
+<body>
+  <ul>
+    <li>js</li>
+    <li>java</li>
+    <li>python</li>
+    <li>django</li>
+  </ul>
+</body>
+</html>
+<script>
+	function getObj() {
+		const name = "crong";
+		const getName = function () {
+			return name;
+		}
+
+		const setName = function (newname) {
+			name = newname;
+		}
+
+		const printName = function() {
+			console.log(name);
+		}
+
+		return {
+			getName : getName,
+			setName : setName
+		}
+
+	}
+
+	var obj = getObj();
+	console.log(obj);
+</script>

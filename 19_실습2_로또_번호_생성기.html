@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="description" content="ES6 in Action: New String Methods [2]">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>ES6 in Action: New String Methods</title>
+  <style>
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    border: 1px solid #000;
+    list-style: none;
+    padding: 10px;  
+  }
+</style>
+</head>
+<body>
+	<div>Lorem ipsum dolor sit amet, consectetur adipisicin</div>
+</body>
+</html>
+<script>
+	// 실습. Destructuring and Set 활용
+
+	// Lotto 번호 만들기.
+	// 1. 유일한 값을 추출하는 과정에서 Set을 사용한다.
+	// 2. getRandomNumber 함수에 변수를 전달하는 과정에서 Destructuring을 사용한다.
+
+	const SETTING = {
+	  name : 'LUCKY LOTTO!',
+	  count : 6,
+	  maxNumber : 45
+	}
+
+	// min(포함)과 max(포함 사이의 임의의 정수를 반환
+	// Math.round() 를 사용하면 고르지 않은 분포를 얻게된다
+	// https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+	function getRandomIntInclusive(min, max) {
+	  return Math.floor(Math.random() * (max - min + 1)) + min;
+	}
+
+	function getRandomNumber() {
+	  // set
+	  let numSet = new Set();
+	  let {count, maxNumber} = SETTING;
+	  
+	  // 6개의 번호 추출을 위한 LOOP
+	  while(numSet.size < count) {
+	    // 추출된 번호인지 확인
+	    let tmpNum = getRandomIntInclusive(1, maxNumber);
+	    if (!numSet.has(tmpNum)) {
+	      numSet.add(tmpNum);
+	    }
+	  }
+	  return [...Array.from(numSet)];
+	}
+
+	console.log(getRandomNumber());
+</script>

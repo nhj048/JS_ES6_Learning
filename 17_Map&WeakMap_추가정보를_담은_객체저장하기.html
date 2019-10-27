@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="description" content="ES6 in Action: New String Methods [2]">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>ES6 in Action: New String Methods</title>
+  <style>
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    border: 1px solid #000;
+    list-style: none;
+    padding: 10px;  
+  }
+</style>
+</head>
+<body>
+	<div>Lorem ipsum dolor sit amet, consectetur adipisicin</div>
+</body>
+</html>
+<script>
+	// map & WeakMap
+	// Array -> set, weakset
+	// Object -> map, weakmap
+
+	// map은 key/value 구조
+
+	let wm = new WeakMap();
+	let myfun = function(){};
+	// 이 함수가 얼마나 실행됐지?를 알려고 할 때.
+
+	wm.set(myfun, 0);
+	console.log(wm);
+
+	for (let i=0; i<10; i++) {
+	  count = wm.get(myfun); //get value
+	  count++;
+	  wm.set(myfun, count);
+	}
+
+	console.log(wm.get(myfun));
+
+	// 초기화
+	myfun = null;
+	console.log(wm.get(myfun));
+	console.log(wm.has(myfun));
+</script>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="description" content="ES6 in Action: New String Methods [2]">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>ES6 in Action: New String Methods</title>
+  <style>
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    border: 1px solid #000;
+    list-style: none;
+    padding: 10px;  
+  }
+</style>
+</head>
+<body>
+	<div>Lorem ipsum dolor sit amet, consectetur adipisicin</div>
+</body>
+</html>
+<script>
+	let mySet = new Set();
+	// console.log(toString.call(mySet));
+
+	// set : 중복없이 유일한 값을 저장하려고 할때 사용
+	// 이미 존재하는지 체크할 때 유용하다.
+
+	// add
+	mySet.add('crong');
+	mySet.add('hary');
+	mySet.add('crong');
+
+	// console.log(mySet.has('crong'));
+	// return type : bool
+
+	// mySet.forEach(function(v) {
+	//   console.log(v);
+	// });
+	// 중복된 값은 나오지 않음
+
+	// set은 거의 배열과 일치함
+
+	// ES6에서는 이러한 자료구조를 제공함
+
+	// delete
+	mySet.delete('crong');
+	mySet.forEach(function(v) {
+	  console.log(v);
+	});
+</script>

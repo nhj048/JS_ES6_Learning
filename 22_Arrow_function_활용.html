@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="description" content="ES6 in Action: New String Methods [2]">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>ES6 in Action: New String Methods</title>
+</head>
+<body>
+	<div id="message"></div>
+</body>
+</html>
+<script>
+	// arrow function
+
+	setTimeout(function() {
+	  console.log("settimeout");
+	}, 1000);
+
+	setTimeout( () => {
+	  console.log("settimeout");
+	}, 1000);
+
+	let newArr = [1,2,3,4,5].map(function(value, index, object) {
+	  return value * 2;
+	});
+
+	console.log(newArr);
+
+	let newArr2 = [1,2,3,4,5].map( (v) => {
+	  return v * 2;
+	});
+
+	console.log("arrow newArr", newArr2);
+
+	let newArr3 = [1,2,3,4,5].map( (v) => v * 2 );
+
+	console.log("arrow3", newArr3);
+
+
+	// 어지간해선 괄호를 쳐주는 걸로!
+	let newArr4 = [1,2,3,4,5].map( (v) => (v * 2) );
+
+	console.log("arrow4", newArr4);
+</script>

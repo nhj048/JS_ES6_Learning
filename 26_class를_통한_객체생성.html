@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="description" content="ES6 in Action: New String Methods [2]">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>ES6 in Action: New String Methods</title>
+</head>
+<body>
+	<p>myDiv</p>
+</body>
+</html>
+<script>
+	// ES6 Class
+	// function Health(name) {
+	//   this.name = name;
+	// }
+
+	// Health.prototype.showHealth = function() {
+	//   console.log(this.name + "님 안녕하세요");
+	// }
+
+	// const h = new Health("crong");
+	// h.showHealth();
+
+	// 완전히 일치함
+	// class는 모습만 class고 사실은 function
+	// 코드 가독성이 좋아서 여러 사람이 코드를 수정해야 할 때 모듈화 하기 좋음
+	class Health {
+	  constructor(name, lastTime) {
+	    this.name = name;
+	    this.lastTime = lastTime;
+	  }
+	  showHealth() {
+	    console.log("안녕하세요" + this.name);
+	  }
+	}
+
+	const myHealth = new Health("crong");
+	myHealth.showHealth();
+	console.log(toString.call(Health));
+</script>

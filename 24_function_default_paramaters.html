@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="description" content="ES6 in Action: New String Methods [2]">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>ES6 in Action: New String Methods</title>
+</head>
+<body>
+	<p>myDiv</p>
+</body>
+</html>
+<script>
+	// default parameters
+
+	// function sum(value, size) {
+	//   size = size || 1;
+	//   return value * size;
+	// }
+
+	// console.log(sum(3));
+
+	function sum(value, size={value: 1}) {  
+	  return value * size.value;
+	}
+
+	console.log(sum(3));
+	console.log(sum(3,{value:3}));
+	console.log(sum(3,{value:0}));
+</script>

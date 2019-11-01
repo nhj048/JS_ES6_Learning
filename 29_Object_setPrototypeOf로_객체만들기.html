@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="description" content="ES6 in Action: New String Methods [2]">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>ES6 in Action: New String Methods</title>
+</head>
+<body>
+	<p>myDiv</p>
+</body>
+</html>
+<script>
+	// setPrototypeOf
+	// protoType에만 추가하는 기능
+
+	const healthObj = {
+	  showHealth : function() {
+	    console.log("오늘 운동시간" + this.healthTime);
+	  },
+	  setHealth : function(newTime) {
+	    this.healthTime = newTime;
+	  }
+	}
+
+	const newobj = Object.setPrototypeOf({
+	  lastTime : "12:30",
+	  name : "Jerry"
+	}, healthObj);
+
+	console.log("newobj is " + newobj);
+</script>

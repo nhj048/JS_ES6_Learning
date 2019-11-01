@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="description" content="ES6 in Action: New String Methods [2]">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>ES6 in Action: New String Methods</title>
+</head>
+<body>
+	<p>myDiv</p>
+</body>
+</html>
+<script>
+	// Object assign Method
+	// 라이브러리를 만드는 때 필요한 지식
+	// ES5에 추가된 내용
+
+	const healthObj = {
+	  showHealth : function() {
+	    console.log("오늘 운동시간" + this.healthTime);
+	  }
+	}
+
+	// const myHealth = Object.create(healthObj);
+
+	// // 이러한 값들을 하나하나 추가해줘야 하는 불편함
+	// myHealth.healthTime = "11:20";
+	// myHealth.name = "Tom";
+
+	// console.log(myHealth);
+
+	const myHealth = Object.assign(Object.create(healthObj), {
+	  name: 'Tom',
+	  lastTime: '11:20'
+	});
+
+	console.log("myhealth is",myHealth);
+</script>

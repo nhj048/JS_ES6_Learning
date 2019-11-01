@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="description" content="ES6 in Action: New String Methods [2]">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>ES6 in Action: New String Methods</title>
+</head>
+<body>
+	<p>myDiv</p>
+</body>
+</html>
+<script>
+	// rest parameters
+
+	// function checkNum() {
+	//   // argument는 배열이 아니므로 진짜 배열로 변경 해야함
+	//   // argument는 가변인자값을 처리하기 좋음
+	//   // 예상할 수 없는 인자값을 처리하는 용도
+	//   const argArray = Array.prototype.slice.call(arguments);
+	//   console.log(toString.call(argArray));
+	//   const result = argArray.every((v) => typeof v === "number");
+	//   console.log(result);
+	// }
+
+	// // const result = checkNum(10,2,"55");
+	// const result = checkNum(10,2,3,4,5,55,NaN);
+
+	function checkNum(...argArray) {
+	  console.log(toString.call(argArray));
+	  const result = argArray.every((v) => typeof v === "number");
+	  console.log(result);
+	}
+
+	// const result = checkNum(10,2,"55");
+	const result = checkNum(10,2,3,4,5,55,NaN);
+</script>

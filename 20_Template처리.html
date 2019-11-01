@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="description" content="ES6 in Action: New String Methods [2]">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>ES6 in Action: New String Methods</title>
+  <style>
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    border: 1px solid #000;
+    list-style: none;
+    padding: 10px;  
+  }
+</style>
+</head>
+<body>
+	<div>Lorem ipsum dolor sit amet, consectetur adipisicin</div>
+</body>
+</html>
+<script>
+	// json으로 응답을 받고, js object로 변환한 후에 어떠한 데이터처리 조작을 한 후에 dom에 추가!
+	// 데이터 + HTML 문자열의 결합이 필요하기 때문에
+	// ANGULAR,REACT가 이러한 용도를 VirtualDom을 만들어서 편하게
+
+	const data = [
+	  {
+	    name: 'coffee-bean',
+	    order: true,
+	    items: ['americano', 'milk', 'green-tea']
+	  },
+	  {
+	    name: 'starbucks',
+	    order: false
+	  }
+	]
+
+
+	const template = `<div>welcome ${data[0].name} !!`;
+	console.log(template);
+</script>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="description" content="ES6 in Action: New String Methods [2]">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>ES6 in Action: New String Methods</title>
+</head>
+<body>
+	<p>myDiv</p>
+</body>
+</html>
+<script>
+	// Object assign Method
+
+	const previousObj = {
+	  name: 'Tom',
+	  lastTime: '11:20'
+	};
+
+	// previousObj 에 기존의 값이 있으면 새로 선언된 값으로 변경하고 없으면 위에 값 그대로
+	const myHealth = Object.assign({}, previousObj, {
+	//   "lastTime" : "12:30",
+	//   "name" : "Jerry",
+	//   "age" : 99
+	});
+
+	// 위에 값을 지워도 true는 나오지 않음
+	// 객체를 카피해서 새로운 객체를 만들 때 유용하게 사용할 수 있음!
+	// 기존의 값을 되돌리기 할 때도 유용하게 사용 가능!
+	console.log(previousObj === myHealth);
+</script>
